@@ -46,7 +46,7 @@ namespace FIT_RSS.Controllers
                             String month = node.SelectSingleNode(".//td[@class='day_month'][@style]").InnerText.Trim();
                             String year = node.SelectSingleNode(".//td[@class='post_year']").InnerText.Trim();
                             String date = day + " " + month + " " + year;
-                            var d = DateTime.ParseExact(date, @"d M yyyy", null);
+                            DateTime d = DateTime.ParseExact(date, @"d M yyyy", null);
                             SyndicationItem item = new SyndicationItem(title, "", new Uri(uri + link), (new Uri(uri + link)).ToString(), d);
                             //item.Title = new TextSyndicationContent(title);
                             //item.Links.Add(new SyndicationLink(new Uri(uri + link)));
