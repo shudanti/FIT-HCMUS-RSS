@@ -50,7 +50,7 @@ namespace FIT_RSS.Controllers
                             SyndicationItem item = new SyndicationItem(title, "", new Uri(uri + link), (new Uri(uri + link)).ToString(), d);
                             //item.Title = new TextSyndicationContent(title);
                             //item.Links.Add(new SyndicationLink(new Uri(uri + link)));
-                            //item.PublishDate = 
+                            item.PublishDate = d;
                             items.Add(item);
                         }
                         feed.Items = items;
